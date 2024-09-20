@@ -24,7 +24,6 @@ export const lightTheme = {
   permanentColors: {
     white: "#f0f0f6",
     grey: "#403f3f",
-    yellow: "#fffb24",
   },
   socialMedia: {
     github: "#2b3137",
@@ -37,7 +36,7 @@ export const darkTheme = {
   colors: {
     primary: "#8e29ff",
     primaryLight: "#9b46fa",
-    primaryExtraLight: "#8a21ff",
+    primaryExtraLight: "#9130fc",
     white: "#1E1E1E",
     grey: "#767676",
   },
@@ -59,7 +58,6 @@ export const darkTheme = {
   permanentColors: {
     white: "#f0f0f6",
     grey: "#767676",
-    yellow: "#D4C300",
   },
   socialMedia: {
     github: "#2b3137",

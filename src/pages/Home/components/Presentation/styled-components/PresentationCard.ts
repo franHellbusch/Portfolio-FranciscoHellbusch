@@ -50,6 +50,12 @@ export const PresentationCard = styled.div`
       max-width: 200px;
     }
   }
+
+  @media (max-width: 450px) {
+    & > img {
+      max-width: 180px;
+    }
+  }
 `;
 
 export const PresentationCardContent = styled.div`

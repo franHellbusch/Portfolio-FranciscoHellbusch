@@ -14,4 +14,10 @@ export const MobileNavBar = styled.div`
   z-index: 30;
   border-radius: 3px;
   box-shadow: 4px 0px 10px 0px rgba(47, 122, 249, 0.1);
+
+  @media (max-width: 660px) {
+    bottom: 15px;
+    left: 15px;
+    right: 15px;
+  }
 `;

@@ -92,6 +92,7 @@ export const SocialMediaItem = styled.a<SocialMediaItemProps>`
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
   transition: background 0.3s, transform 0.3s;
   color: ${(props) => props.theme.permanentColors.white};
 

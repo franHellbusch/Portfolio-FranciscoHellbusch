@@ -10,4 +10,8 @@ export const PageContainer = styled.div`
   @media (max-width: 767px) {
     padding-bottom: 100px;
   }
+
+  @media (max-width: 660px) {
+    padding: 0 15px 80px 15px;
+  }
 `;

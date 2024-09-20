@@ -48,7 +48,7 @@ export const DarkModeButton = styled.div`
   & label svg.sun {
     width: 20px;
     opacity: 0;
-    color: ${(props) => props.theme.text.white};
+    color: ${(props) => props.theme.permanentColors.white};
   }
 
   & label svg.moon {
@@ -57,7 +57,7 @@ export const DarkModeButton = styled.div`
   }
 
   & input:checked + label {
-    background: ${(props) => props.theme.permanentColors.yellow};
+    background: ${(props) => props.theme.colors.primaryLight};
   }
 
   & input:checked + label svg.sun {
