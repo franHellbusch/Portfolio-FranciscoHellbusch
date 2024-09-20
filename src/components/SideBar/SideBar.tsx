@@ -56,13 +56,22 @@ const SideBar: React.FC<SideBarProps> = ({ themeToggle }) => {
         </SideBarNavLink>
       </SideBarNav>
       <SideBarSocialMedia>
-        <SideBarSocialMediaLink $sectionName='GitHub' href='' target='_blank'>
+        <SideBarSocialMediaLink
+          $sectionName='GitHub'
+          href='https://github.com/franHellbusch'
+          target='_blank'>
           <GitHub />
         </SideBarSocialMediaLink>
-        <SideBarSocialMediaLink $sectionName='Instagram' href='' target='_blank'>
+        <SideBarSocialMediaLink
+          $sectionName='Instagram'
+          href='https://www.instagram.com/franhellbusch/'
+          target='_blank'>
           <Instagram />
         </SideBarSocialMediaLink>
-        <SideBarSocialMediaLink $sectionName='LinkedIn' href='' target='_blank'>
+        <SideBarSocialMediaLink
+          $sectionName='LinkedIn'
+          href='https://www.linkedin.com/in/fhdeveloper/'
+          target='_blank'>
           <Linkedin />
         </SideBarSocialMediaLink>
       </SideBarSocialMedia>

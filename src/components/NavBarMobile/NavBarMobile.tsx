@@ -83,13 +83,22 @@ const NavBarMobile: React.FC<INavBarMobileProps> = ({ themeToggle }) => {
         </SocialMediaButton>
 
         <SocialMediaItemsContainer $open={isSocialMediaOpen}>
-          <SocialMediaItem $socialMediaName='Github' href='' target='_blank'>
+          <SocialMediaItem
+            $socialMediaName='Github'
+            href='https://github.com/franHellbusch'
+            target='_blank'>
             <GitHub />
           </SocialMediaItem>
-          <SocialMediaItem $socialMediaName='Instagram' href='' target='_blank'>
+          <SocialMediaItem
+            $socialMediaName='Instagram'
+            href='https://www.instagram.com/franhellbusch/'
+            target='_blank'>
             <Instagram />
           </SocialMediaItem>
-          <SocialMediaItem $socialMediaName='LinkedIn' href='' target='_blank'>
+          <SocialMediaItem
+            $socialMediaName='LinkedIn'
+            href='https://www.linkedin.com/in/fhdeveloper/'
+            target='_blank'>
             <Linkedin />
           </SocialMediaItem>
         </SocialMediaItemsContainer>

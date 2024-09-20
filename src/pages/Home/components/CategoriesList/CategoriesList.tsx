@@ -8,22 +8,22 @@ import contactIcon from "../../assets/icons/contact-icon.png";
 const CategoriesList: React.FC = () => {
   return (
     <CategoriesListContainer>
-      <CategoryCard to='/'>
+      <CategoryCard to='/work'>
         <img src={workIcon} alt='Work Icon' />
         <h3>Work</h3>
         <p>Discover my professional experience and the skills I've developed.</p>
       </CategoryCard>
-      <CategoryCard to='/'>
+      <CategoryCard to='/education'>
         <img src={educationIcon} alt='Education Icon' />
         <h3>Education</h3>
         <p>Learn about my academic background and completed courses.</p>
       </CategoryCard>
-      <CategoryCard to='/'>
+      <CategoryCard to='/proyects'>
         <img src={developmentIcon} alt='Development Icon' />
         <h3>Proyects</h3>
         <p>Explore the projects I've worked on and my portfolio.</p>
       </CategoryCard>
-      <CategoryCard to='/'>
+      <CategoryCard to='/contact'>
         <img src={contactIcon} alt='Contact Icon' />
         <h3>Contact</h3>
         <p>Get in touch for more information or collaboration opportunities.</p>
