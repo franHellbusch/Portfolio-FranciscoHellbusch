@@ -6,7 +6,7 @@ interface SideBarSocialMediaLinkProps {
 }
 
 export const Paragraph = styled("p")<SideBarSocialMediaLinkProps>`
-  font-size: ${(props) => props.$fontSize || "15px"};
+  font-size: ${(props) => props.$fontSize || "14px"};
   color: ${(props) => props.$color || props.theme.text.light};
-  line-height: 23px;
+  line-height: 20px;
 `;

@@ -23,7 +23,7 @@ const CursorProvider: React.FC<CursorProviderProps> = ({ children }) => {
     if (isMobile) return; // No agregar listeners en móviles
 
     const onMouseMove = (event: MouseEvent) => {
-      setCursorPos({ x: event.pageX, y: event.pageY });
+      setCursorPos({ x: event.clientX, y: event.clientY }); // Cambia a clientX y clientY
     };
 
     document.addEventListener("mousemove", onMouseMove);
@@ -58,9 +58,21 @@ const CursorProvider: React.FC<CursorProviderProps> = ({ children }) => {
 
   return (
     <CursorContext.Provider value={{}}>
-      <Cursor style={{ left: `${cursorPos.x}px`, top: `${cursorPos.y}px` }} />
+      <Cursor
+        style={{
+          left: `${cursorPos.x}px`,
+          top: `${cursorPos.y}px`,
+          position: "fixed",
+          zIndex: 9999,
+        }}
+      />
       <CursorFollower
-        style={{ left: `${followerStyle.x + 4}px`, top: `${followerStyle.y + 4}px` }}
+        style={{
+          left: `${followerStyle.x + 4}px`,
+          top: `${followerStyle.y + 4}px`,
+          position: "fixed",
+          zIndex: 9998,
+        }}
       />
       {children}
     </CursorContext.Provider>
