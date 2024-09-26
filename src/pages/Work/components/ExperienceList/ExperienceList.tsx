@@ -11,10 +11,13 @@ import {
   ExperienceTimeLine,
 } from "./styled-components";
 import { Paragraph, SubTitle } from "@/styled-components";
+import { useMediaQuery } from "react-responsive";
 
 const ExperienceList: React.FC = () => {
   const [experiences, setExperiences] = useState<Experience[]>([]);
-  const [loading, setLoading] = useState<boolean>(true);
+  const [loading, setLoading] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
+  const isMobile = useMediaQuery({ query: "(max-width: 940px)" });
 
   useEffect(() => {
     const fetchExperiences = async () => {
@@ -27,6 +30,12 @@ const ExperienceList: React.FC = () => {
     fetchExperiences();
   }, []);
 
+  const handleClick = () => {
+    if (isMobile) {
+      setIsOpen(!isOpen); // Alterna el estado solo en mobile
+    }
+  };
+
   return (
     <ExperienceListContainer>
       {loading ? (
@@ -38,6 +47,8 @@ const ExperienceList: React.FC = () => {
               <ExperienceSpace />
               <ExperienceTimeLine $direction='left'>
                 <CompanyLinkContainer
+                  $isOpen={isOpen}
+                  onClick={handleClick}
                   $direction='left'
                   $date={experience.date}
                   $companyName={experience.company}
@@ -65,6 +76,8 @@ const ExperienceList: React.FC = () => {
               </ExperienceCard>
               <ExperienceTimeLine $direction='right'>
                 <CompanyLinkContainer
+                  $isOpen={isOpen}
+                  onClick={handleClick}
                   $date={experience.date}
                   $direction='right'
                   $companyName={experience.company}

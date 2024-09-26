@@ -4,6 +4,7 @@ interface CompanyLinkProps {
   $companyName: string;
   $direction: string;
   $date: string;
+  $isOpen: boolean;
 }
 
 export const CompanyLinkContainer = styled.div<CompanyLinkProps>`
@@ -73,5 +74,45 @@ export const CompanyLinkContainer = styled.div<CompanyLinkProps>`
   &:hover::before {
     ${(props) =>
       props.$direction == "right" ? `left: calc(100% + 180px);` : `right: calc(100% + 180px);`}
+  }
+
+  @media (max-width: 940px) {
+    & > a,
+    & > span {
+      left: 50%;
+    }
+
+    &::before {
+      left: calc(100% + 10px);
+    }
+
+    &:hover::before {
+      left: ${(props) => (props.$isOpen ? "calc(100% + 180px)" : "calc(100% + 10px)")};
+    }
+
+    &:hover > a,
+    &:hover > span {
+      visibility: ${(props) => (props.$isOpen ? "visible" : "hidden")};
+      opacity: ${(props) => (props.$isOpen ? "1" : "0")};
+      left: ${(props) => (props.$isOpen ? "calc(100% + 10px)" : "50%")};
+    }
+  }
+
+  @media (max-width: 450px) {
+    & > a,
+    & > span {
+      width: fit-content;
+      white-space: nowrap;
+    }
+
+    &::before {
+      left: calc(100% + 15px);
+      top: 13px;
+    }
+
+    &:hover::before {
+      left: calc(100% + 15px);
+      top: ${(props) => (props.$isOpen ? " -20px" : "13px")};
+    }
   }
 `;
