@@ -3,7 +3,7 @@ import "./App.css";
 import { darkTheme, lightTheme } from "./utils";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { AppContainer, GlobalStyle } from "./styled-components";
-import { Home, Work } from "./pages";
+import { Education, Home, Work } from "./pages";
 import { NavBarMobile, SideBar } from "./components";
 import { useState } from "react";
 import CursorProvider from "./context/CursorContext";
@@ -34,6 +34,7 @@ function App() {
             <Routes>
               <Route path='/' element={<Home />} />
               <Route path='/work' element={<Work />} />
+              <Route path='/education' element={<Education />} />
             </Routes>
           </AppContainer>
         </CursorProvider>
