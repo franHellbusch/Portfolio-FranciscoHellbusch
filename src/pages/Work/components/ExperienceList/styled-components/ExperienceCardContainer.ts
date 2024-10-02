@@ -78,6 +78,6 @@ export const ExperienceCard = styled.div`
 
   @media (max-width: 940px) {
     order: 2;
-    margin: 65px 0 80px 0;
+    margin: 50px 0 50px 0;
   }
 `;

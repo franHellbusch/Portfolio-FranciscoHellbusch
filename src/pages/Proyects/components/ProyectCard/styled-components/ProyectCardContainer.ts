@@ -17,6 +17,13 @@ export const ProyectCardContainer = styled.div`
     width: calc(50% - 15px);
   }
 
+  @media (max-width: 767px) {
+    & > h4 {
+      font-size: 18px;
+      line-height: 22px;
+    }
+  }
+
   @media (max-width: 575px) {
     width: 100%;
   }

@@ -93,14 +93,14 @@ export const ProyectTechnologiesContainer = styled.div`
 
 export const ProyectTechnologie = styled.span`
   background: ${(props) => props.theme.background.greyLight};
-  font-weight: 700;
+  font-weight: 600;
   border-radius: 20px;
   padding: 5px 10px;
   font-size: 14px;
   display: flex;
   align-items: center;
   gap: 5px;
-  color: ${(props) => props.theme.text.light};
+  color: ${(props) => props.theme.text.grey};
 
   & > img {
     width: 14px;

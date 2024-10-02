@@ -23,4 +23,8 @@ export const ProyectsListContainer = styled.div`
   @media (max-width: 767px) {
     margin-bottom: 20px;
   }
+
+  @media (max-width: 575px) {
+    gap: 40px;
+  }
 `;

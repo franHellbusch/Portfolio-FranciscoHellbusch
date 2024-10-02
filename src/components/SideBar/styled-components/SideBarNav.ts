@@ -89,4 +89,5 @@ export const SideBarNav = styled.div`
   gap: 25px;
   justify-content: center;
   flex-grow: 1;
+  margin: 40px 0;
 `;
