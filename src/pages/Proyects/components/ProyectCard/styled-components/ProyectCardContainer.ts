@@ -41,6 +41,7 @@ export const ProyectCardContentContainer = styled.div<ProyectCardContentContaine
   background-position: center;
   background-size: 170%;
   width: 100%;
+  box-sizing: border-box;
   aspect-ratio: 5/4;
   transition: 0.3s;
 
