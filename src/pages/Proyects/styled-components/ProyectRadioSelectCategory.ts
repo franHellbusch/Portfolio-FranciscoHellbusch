@@ -3,18 +3,35 @@ import styled from "styled-components";
 export const ProyectRadioSelectCategory = styled.div`
   position: relative;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   border-radius: 0.5rem;
   background-color: ${(props) => props.theme.background.greyLight};
   box-sizing: border-box;
   box-shadow: 0 0 0px 1px rgba(0, 0, 0, 0.06);
-  padding: 0.25rem;
-  max-width: 450px;
-  font-size: 14px;
+  padding: 5px;
+  overflow-x: auto; /* Habilita el scroll horizontal */
+  gap: 5px; /* Añadir un espacio entre categorías */
+  max-width: 100%; /* Asegúrate de que no exceda el ancho del contenedor padre */
+  white-space: nowrap; /* Evita que las categorías se envuelvan en múltiples líneas */
+
+  /* Opcional: estilizar el scrollbar */
+  &::-webkit-scrollbar {
+    height: 6px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: ${(props) => props.theme.background.grey};
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
 `;
 
 export const CategoryRadio = styled.label`
-  flex: 1 1 auto;
+  flex-shrink: 0; /* Asegura que el elemento no se reduzca */
+  width: 100px; /* Fija el ancho de cada categoría */
   text-align: center;
 `;
 
@@ -32,10 +49,14 @@ export const CategoryName = styled.span<CategoryNameProps>`
   justify-content: center;
   border-radius: 0.5rem;
   border: none;
-  padding: 0.5rem 0;
+  padding: 8px 0;
   color: ${(props) => props.theme.text.grey};
-  transition: all 0.15s ease-in-out;
   background-color: ${(props) => (props.$checked ? props.theme.background.grey : "transparent")};
   font-weight: ${(props) => (props.$checked ? "600" : "normal")};
   transition: 0.3s;
+  font-size: 14px;
+
+  @media (max-width: 767px) {
+    font-size: 13px;
+  }
 `;

@@ -89,6 +89,14 @@ export const ProyectCardDetailButtonContainer = styled.div`
       transition: 0.3s;
     }
   }
+
+  @media (max-width: 650px) {
+    width: 57px;
+  }
+
+  @media (max-width: 575px) {
+    width: 62px;
+  }
 `;
 
 export const ProyectCardDetailButton = styled.button`

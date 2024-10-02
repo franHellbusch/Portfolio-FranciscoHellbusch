@@ -12,6 +12,14 @@ export const ProyectCardContainer = styled.div`
     color: ${(props) => props.theme.text.dark};
     line-height: 24px;
   }
+
+  @media (max-width: 1120px) {
+    width: calc(50% - 15px);
+  }
+
+  @media (max-width: 575px) {
+    width: 100%;
+  }
 `;
 
 interface ProyectCardContentContainerProps {

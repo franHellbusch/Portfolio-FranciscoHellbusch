@@ -6,20 +6,21 @@ export const ProyectsListContainer = styled.div`
   align-self: center;
   gap: 30px;
   flex-wrap: wrap;
+  margin: 20px 0 50px 0;
 
-  @media (max-width: 1150px) {
+  @media (max-width: 1450px) {
+    width: 95%;
+  }
+
+  @media (max-width: 1300px) {
     width: 90%;
+  }
+
+  @media (max-width: 1050px) {
+    width: 95%;
   }
 
   @media (max-width: 767px) {
     margin-bottom: 20px;
-  }
-
-  @media (max-width: 640px) {
-    width: 95%;
-  }
-
-  @media (max-width: 450px) {
-    width: 100%;
   }
 `;

@@ -105,4 +105,12 @@ export const ProyectTechnologie = styled.span`
   & > img {
     width: 14px;
   }
+
+  @media (max-width: 950px) {
+    font-size: 13px;
+
+    & > img {
+      width: 13px;
+    }
+  }
 `;

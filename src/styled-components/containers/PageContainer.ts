@@ -10,6 +10,7 @@ export const PageContainer = styled.div<PageContainerProps>`
   padding: 0 25px;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
   ${(props) => props.$centered && `align-items: center; justify-content: center;`}
 
   @media (max-width: 767px) {

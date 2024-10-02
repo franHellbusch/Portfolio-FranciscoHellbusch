@@ -28,7 +28,7 @@ const ProyectCard: React.FC<IProyectCardProps> = ({ proyect }) => {
         <ProyectTechnologiesContainer>
           <span></span>
           <span></span>
-          {proyect.technologies.map((tech) => (
+          {proyect.technologies.slice(0, 2).map((tech) => (
             <ProyectTechnologie>
               <img src={tech.logo} alt='logo tech' /> {tech.name}
             </ProyectTechnologie>

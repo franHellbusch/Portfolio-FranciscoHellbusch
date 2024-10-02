@@ -7,6 +7,7 @@ export const ProyectsDescription = styled.div`
   gap: 10px;
   width: 85%;
   margin: 50px 0 20px 0;
+  align-items: flex-start;
 
   h2 {
     font-size: 28px;
@@ -28,9 +29,15 @@ export const ProyectsDescription = styled.div`
     max-width: 700px;
   }
 
-  @media (max-width: 1200px) {
-    width: 90%;
+  @media (max-width: 1450px) {
+    width: 95%;
+  }
 
+  @media (max-width: 1300px) {
+    width: 90%;
+  }
+
+  @media (max-width: 1200px) {
     h2 {
       font-size: 26px;
       line-height: 20px;
@@ -43,7 +50,12 @@ export const ProyectsDescription = styled.div`
     }
   }
 
-  @media (max-width: 640px) {
+  @media (max-width: 1050px) {
     width: 95%;
+  }
+
+  @media (max-width: 767px) {
+    align-items: center;
+    text-align: center;
   }
 `;
