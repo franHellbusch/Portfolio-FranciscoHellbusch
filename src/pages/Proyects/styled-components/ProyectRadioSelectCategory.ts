@@ -16,12 +16,13 @@ export const ProyectRadioSelectCategory = styled.div`
 
   /* Opcional: estilizar el scrollbar */
   &::-webkit-scrollbar {
-    height: 6px;
+    height: 4px;
   }
 
   &::-webkit-scrollbar-thumb {
     background-color: ${(props) => props.theme.background.grey};
     border-radius: 10px;
+    transition: background 0.3s;
   }
 
   &::-webkit-scrollbar-track {

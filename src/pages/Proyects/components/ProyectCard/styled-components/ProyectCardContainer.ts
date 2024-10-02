@@ -39,8 +39,12 @@ export const ProyectCardContentContainer = styled.div<ProyectCardContentContaine
   background-image: url(${(props) => props.$backgroundImage});
   border: 2px solid ${(props) => props.theme.background.grey};
   background-position: center;
-  background-size: cover;
+  background-size: 170%;
   width: 100%;
   aspect-ratio: 5/4;
   transition: 0.3s;
+
+  &:hover {
+    background-size: 180%;
+  }
 `;

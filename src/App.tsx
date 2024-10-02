@@ -2,12 +2,16 @@ import { ThemeProvider } from "styled-components";
 import "./App.css";
 import { darkTheme, lightTheme } from "./utils";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { AppContainer, GlobalStyle } from "./styled-components";
-import { Education, Home, Proyects, Work } from "./pages";
+import { AppContainer, GlobalStyle, PageContainer } from "./styled-components";
 import { NavBarMobile, SideBar } from "./components";
-import { useState } from "react";
+import { lazy, Suspense, useState } from "react";
 import CursorProvider from "./context/CursorContext";
 import { useMediaQuery } from "react-responsive";
+
+const Education = lazy(() => import("./pages/Education/Education"));
+const Home = lazy(() => import("./pages/Home/Home"));
+const Proyects = lazy(() => import("./pages/Proyects/Proyects"));
+const Work = lazy(() => import("./pages/Work/Work"));
 
 function App() {
   const [theme, setTheme] = useState(lightTheme);
@@ -30,13 +34,14 @@ function App() {
             ) : (
               <SideBar themeToggle={themeToggle} />
             )}
-
-            <Routes>
-              <Route path='/' element={<Home />} />
-              <Route path='/work' element={<Work />} />
-              <Route path='/education' element={<Education />} />
-              <Route path='/proyects' element={<Proyects />} />
-            </Routes>
+            <Suspense fallback={<PageContainer />}>
+              <Routes>
+                <Route path='/' element={<Home />} />
+                <Route path='/work' element={<Work />} />
+                <Route path='/education' element={<Education />} />
+                <Route path='/proyects' element={<Proyects />} />
+              </Routes>
+            </Suspense>
           </AppContainer>
         </CursorProvider>
       </BrowserRouter>
