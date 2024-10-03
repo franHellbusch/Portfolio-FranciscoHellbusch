@@ -2,9 +2,11 @@ import styled from "styled-components";
 
 interface PageContainerProps {
   $centered?: boolean;
+  $position?: string;
 }
 
 export const PageContainer = styled.div<PageContainerProps>`
+  position: ${(props) => props.$position || "initial"};
   flex: 1;
   background: ${(props) => props.theme.background.light};
   padding: 0 25px;

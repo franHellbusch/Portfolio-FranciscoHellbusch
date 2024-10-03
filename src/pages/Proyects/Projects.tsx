@@ -1,55 +1,55 @@
-import { ProyectCategory, ProyectModel } from "@/models";
-import { getProyectsCategoryList, getProyectsList } from "@/services";
+import { ProjectCategory, ProjectModel } from "@/models";
+import { getProjectsCategoryList, getProjectsList } from "@/services";
 import { PageContainer } from "@/styled-components";
 import React, { useEffect, useState } from "react";
 import {
   CategoryInput,
   CategoryName,
   CategoryRadio,
-  ProyectRadioSelectCategory,
-  ProyectsDescription,
+  ProjectRadioSelectCategory,
+  ProjectsDescription,
 } from "./styled-components";
 import { Code } from "react-feather";
-import { ProyectsList } from "./components";
+import { ProjectsList } from "./components";
 
-const Proyects: React.FC = () => {
-  const [proyectsList, setProyectsList] = useState<ProyectModel[]>([]);
-  const [proyectsCategoryList, setProyectsCategoryList] = useState<ProyectCategory[]>([]);
-  const [selectedCategory, setSelectedCategory] = useState<ProyectCategory | null>(null);
+const Projects: React.FC = () => {
+  const [projectsList, setProjectsList] = useState<ProjectModel[]>([]);
+  const [projectsCategoryList, setProjectsCategoryList] = useState<ProjectCategory[]>([]);
+  const [selectedCategory, setSelectedCategory] = useState<ProjectCategory | null>(null);
 
   useEffect(() => {
-    const fetchProyects = async () => {
-      const data = await getProyectsList(selectedCategory?.name || null);
-      setProyectsList(data);
+    const fetchProjects = async () => {
+      const data = await getProjectsList(selectedCategory?.name || null);
+      setProjectsList(data);
     };
 
-    fetchProyects();
+    fetchProjects();
   }, [selectedCategory]);
 
   useEffect(() => {
-    const fetchProyectsCategories = async () => {
-      const categories = await getProyectsCategoryList();
-      setProyectsCategoryList(categories);
+    const fetchProjectsCategories = async () => {
+      const categories = await getProjectsCategoryList();
+      setProjectsCategoryList(categories);
     };
 
-    fetchProyectsCategories();
+    fetchProjectsCategories();
   }, []);
 
-  const handleCategoryChange = (category: ProyectCategory | null = null) => {
+  const handleCategoryChange = (category: ProjectCategory | null = null) => {
     setSelectedCategory(category);
   };
 
   return (
-    <PageContainer>
-      <ProyectsDescription>
+    <PageContainer $position='relative'>
+      <ProjectsDescription>
         <h2>
-          <Code /> My Proyects
+          <Code /> My Projects
         </h2>
         <p>
           Explore my projects across frontend, backend, and full stack development, showcasing my
           skills and experience in building dynamic applications.
         </p>
-        <ProyectRadioSelectCategory>
+        <ProjectRadioSelectCategory>
           <CategoryRadio>
             <CategoryInput
               type='radio'
@@ -59,7 +59,7 @@ const Proyects: React.FC = () => {
             />
             <CategoryName $checked={selectedCategory == null}>All</CategoryName>
           </CategoryRadio>
-          {proyectsCategoryList.map((category) => (
+          {projectsCategoryList.map((category) => (
             <CategoryRadio key={category.id}>
               <CategoryInput
                 type='radio'
@@ -72,11 +72,11 @@ const Proyects: React.FC = () => {
               </CategoryName>
             </CategoryRadio>
           ))}
-        </ProyectRadioSelectCategory>
-      </ProyectsDescription>
-      <ProyectsList proyects={proyectsList} />
+        </ProjectRadioSelectCategory>
+      </ProjectsDescription>
+      <ProjectsList projects={projectsList} />
     </PageContainer>
   );
 };
 
-export default Proyects;
+export default Projects;

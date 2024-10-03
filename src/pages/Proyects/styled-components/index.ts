@@ -1,2 +1,2 @@
-export * from "./ProyectRadioSelectCategory";
-export * from "./ProyectsDescription";
+export * from "./ProjectRadioSelectCategory";
+export * from "./ProjectsDescription";

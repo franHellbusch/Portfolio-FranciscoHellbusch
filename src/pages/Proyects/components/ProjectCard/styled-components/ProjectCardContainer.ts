@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 // Contenedor de la Card
-export const ProyectCardContainer = styled.div`
+export const ProjectCardContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -29,11 +29,11 @@ export const ProyectCardContainer = styled.div`
   }
 `;
 
-interface ProyectCardContentContainerProps {
+interface ProjectCardContentContainerProps {
   $backgroundImage: string;
 }
 
-export const ProyectCardContentContainer = styled.div<ProyectCardContentContainerProps>`
+export const ProjectCardContentContainer = styled.div<ProjectCardContentContainerProps>`
   position: relative;
   border-radius: 20px;
   background-image: url(${(props) => props.$backgroundImage});

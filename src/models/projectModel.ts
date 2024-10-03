@@ -1,9 +1,9 @@
-export type ProyectTechnologie = {
+export type ProjectTechnologie = {
   name: string;
   logo: string;
 };
 
-export type ProyectModel = {
+export type ProjectModel = {
   id: string;
   title: string;
   description: string;
@@ -11,10 +11,10 @@ export type ProyectModel = {
   githubLink: string | null;
   category: string;
   images: string[];
-  technologies: ProyectTechnologie[];
+  technologies: ProjectTechnologie[];
 };
 
-export type ProyectCategory = {
+export type ProjectCategory = {
   id: string;
   name: string;
 };

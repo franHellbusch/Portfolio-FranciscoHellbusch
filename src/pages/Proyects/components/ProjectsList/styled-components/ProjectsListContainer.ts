@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const ProyectsListContainer = styled.div`
+export const ProjectsListContainer = styled.div`
   width: 85%;
   display: flex;
   align-self: center;

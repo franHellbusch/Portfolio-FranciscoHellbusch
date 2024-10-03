@@ -10,7 +10,7 @@ import { useMediaQuery } from "react-responsive";
 
 const Education = lazy(() => import("./pages/Education/Education"));
 const Home = lazy(() => import("./pages/Home/Home"));
-const Proyects = lazy(() => import("./pages/Proyects/Proyects"));
+const Proyects = lazy(() => import("./pages/Proyects/Projects"));
 const Work = lazy(() => import("./pages/Work/Work"));
 
 function App() {

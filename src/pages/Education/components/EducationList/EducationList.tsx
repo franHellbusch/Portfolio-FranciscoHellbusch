@@ -8,7 +8,6 @@ interface IEducationListProps {
 }
 
 const EducationList: React.FC<IEducationListProps> = ({ educationList }) => {
-  console.log(educationList);
   return (
     <EducationListContainer>
       {educationList.length == 0 ? (

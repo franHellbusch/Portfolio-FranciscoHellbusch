@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const ProyectRadioSelectCategory = styled.div`
+export const ProjectRadioSelectCategory = styled.div`
   position: relative;
   display: flex;
   flex-wrap: nowrap;
