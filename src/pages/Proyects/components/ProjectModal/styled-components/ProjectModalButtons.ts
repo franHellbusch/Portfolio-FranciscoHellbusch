@@ -45,6 +45,10 @@ export const ProjectModalGithubButton = styled.a`
   &:hover {
     opacity: 0.7;
   }
+
+  @media (max-width: 600px) {
+    padding: 8px 15px;
+  }
 `;
 
 export const ProjectModalDeployButton = styled.a`

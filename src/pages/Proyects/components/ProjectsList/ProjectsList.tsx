@@ -15,9 +15,13 @@ const ProjectsList: React.FC<IProjectsListProps> = ({ projects }) => {
     setSelectedProject(selected);
   };
 
+  const handleCloseProyect = () => {
+    setSelectedProject(null);
+  };
+
   return (
     <ProjectsListContainer>
-      <ProjectModal project={selectedProject} />
+      <ProjectModal handleClose={handleCloseProyect} project={selectedProject} />
       {projects.map((project) => (
         <ProjectCard handleSelect={handleSelectProyect} key={project.id} project={project} />
       ))}

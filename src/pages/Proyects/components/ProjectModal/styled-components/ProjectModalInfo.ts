@@ -1,7 +1,9 @@
 import styled from "styled-components";
 
 export const ProjectModalInfoContainer = styled.div`
-  width: calc(50% - 20px);
+  max-width: 500px;
+  flex: 1;
+  min-width: 420px;
 
   h4 {
     font-size: 26px;
@@ -36,5 +38,23 @@ export const ProjectModalInfoContainer = styled.div`
       line-height: 20px;
       max-width: 600px;
     }
+  }
+
+  @media (max-width: 500px) {
+    h2 {
+      font-size: 20px;
+      line-height: 16px;
+    }
+  }
+
+  @media (max-width: 400px) {
+    h2 {
+      font-size: 18px;
+      line-height: 16px;
+    }
+  }
+
+  @media (max-width: 500px) {
+    min-width: auto;
   }
 `;

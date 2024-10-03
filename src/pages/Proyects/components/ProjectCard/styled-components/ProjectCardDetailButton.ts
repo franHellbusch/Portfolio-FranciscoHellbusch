@@ -102,7 +102,6 @@ export const ProjectCardDetailButtonContainer = styled.div`
 export const ProjectCardDetailButton = styled.button`
   width: calc(100% - 10px);
   aspect-ratio: 1/1;
-  border: 0;
   border-radius: 50%;
   background: ${(props) => props.theme.background.greyLight};
   display: flex;
