@@ -35,7 +35,7 @@ export const ProjectModalContainer = styled.div<ProjectModalContainerProps>`
   right: 100%;
   z-index: 10;
   width: calc(100% - 90px);
-  height: 100vh; /* Asegura que ocupe toda la altura de la pantalla */
+  height: 100%; /* Asegura que ocupe toda la altura de la pantalla */
   background: ${(props) => props.theme.background.greyLight};
   box-sizing: border-box;
   display: flex;

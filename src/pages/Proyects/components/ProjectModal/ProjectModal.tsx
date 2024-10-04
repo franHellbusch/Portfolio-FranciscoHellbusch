@@ -3,7 +3,6 @@ import { ProjectModel } from "@/models";
 import {
   ProjectModalBoxContainer,
   ProjectModalButtonsContainer,
-  ProjectModalCarrousel,
   ProjectModalContainer,
   ProjectModalContentContainer,
   ProjectModalDeployButton,
@@ -15,6 +14,7 @@ import {
   ProjectModalTechnologiesTitle,
 } from "./styled-components";
 import { ArrowLeft, Code, Eye, EyeOff } from "react-feather";
+import { ProjectModalCarrousel } from "../ProjectModalCarrousel";
 
 interface IProjectModalProps {
   project: ProjectModel | null | "initial";
@@ -69,7 +69,7 @@ const ProjectModal: React.FC<IProjectModalProps> = ({ project, handleClose }) =>
               )}
             </ProjectModalButtonsContainer>
           </ProjectModalInfoContainer>
-          <ProjectModalCarrousel src={project?.images[0]} />
+          {project?.images && <ProjectModalCarrousel images={project?.images} />}
         </ProjectModalContentContainer>
       </ProjectModalBoxContainer>
     </ProjectModalContainer>

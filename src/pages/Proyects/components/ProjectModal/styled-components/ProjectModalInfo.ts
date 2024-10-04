@@ -55,6 +55,6 @@ export const ProjectModalInfoContainer = styled.div`
   }
 
   @media (max-width: 500px) {
-    min-width: auto;
+    min-width: 220px;
   }
 `;
