@@ -56,7 +56,7 @@ export const ProjectModalContainer = styled.div<ProjectModalContainerProps>`
   pointer-events: ${(props) => (props.$active ? "auto" : "none")};
 
   @media (max-width: 767px) {
-    padding: 20px 10px 90px 10px;
+    padding: 20px 10px;
     width: 100%;
     align-items: flex-start; /* Para pantallas más pequeñas, el contenido empieza desde arriba */
   }
@@ -110,6 +110,10 @@ export const ProjectModalBoxContainer = styled.div<ProjectModalBoxContainerProps
       : css`
           animation: ${fadeOut} 0.3s ease-in-out forwards;
         `}
+
+  @media (max-width: 767px) {
+    padding: 20px 20px 90px 20px;
+  }
 `;
 
 export const ProjectModalContentContainer = styled.div`
