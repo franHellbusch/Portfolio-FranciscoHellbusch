@@ -22,7 +22,6 @@ interface IProjectModalProps {
 }
 
 const ProjectModal: React.FC<IProjectModalProps> = ({ project, handleClose }) => {
-  console.log(project);
   if (project == "initial") {
     return null; // O puedes retornar algún mensaje o componente alternativo.
   }

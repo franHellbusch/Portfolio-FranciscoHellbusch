@@ -1,6 +1,10 @@
 import styled from "styled-components";
 
-export const ProjectsListContainer = styled.div`
+interface ProjectsListContainerProps {
+  $shouldCollapse: boolean;
+}
+
+export const ProjectsListContainer = styled.div<ProjectsListContainerProps>`
   width: 85%;
   display: flex;
   align-self: center;
@@ -22,6 +26,8 @@ export const ProjectsListContainer = styled.div`
 
   @media (max-width: 767px) {
     margin-bottom: 20px;
+
+    height: ${({ $shouldCollapse }) => ($shouldCollapse ? "0px" : "auto")};
   }
 
   @media (max-width: 575px) {

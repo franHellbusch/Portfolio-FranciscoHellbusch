@@ -58,7 +58,7 @@ export const ProjectModalContainer = styled.div<ProjectModalContainerProps>`
   @media (max-width: 767px) {
     padding: 20px 10px;
     width: 100%;
-    align-items: flex-start; /* Para pantallas más pequeñas, el contenido empieza desde arriba */
+    align-items: flex-start;
   }
 `;
 
