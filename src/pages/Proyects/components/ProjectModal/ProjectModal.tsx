@@ -17,11 +17,16 @@ import {
 import { ArrowLeft, Code, Eye, EyeOff } from "react-feather";
 
 interface IProjectModalProps {
-  project: ProjectModel | null;
+  project: ProjectModel | null | "initial";
   handleClose: () => void;
 }
 
 const ProjectModal: React.FC<IProjectModalProps> = ({ project, handleClose }) => {
+  console.log(project);
+  if (project == "initial") {
+    return null; // O puedes retornar algún mensaje o componente alternativo.
+  }
+
   return (
     <ProjectModalContainer $active={!!project}>
       <ProjectModalBoxContainer $active={!!project}>

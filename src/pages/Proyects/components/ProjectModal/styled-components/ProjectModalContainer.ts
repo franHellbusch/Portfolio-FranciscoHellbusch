@@ -32,7 +32,7 @@ export const ProjectModalContainer = styled.div<ProjectModalContainerProps>`
   position: fixed;
   padding: 10px 50px 30px 50px;
   top: 0;
-  right: 0;
+  right: 100%;
   z-index: 10;
   width: calc(100% - 90px);
   height: 100vh; /* Asegura que ocupe toda la altura de la pantalla */
@@ -105,7 +105,7 @@ export const ProjectModalBoxContainer = styled.div<ProjectModalBoxContainerProps
     props.$active
       ? css`
           animation: ${fadeIn} 0.3s ease-in-out forwards;
-          animation-delay: 0.3s;
+          animation-delay: 0.5s;
         `
       : css`
           animation: ${fadeOut} 0.3s ease-in-out forwards;

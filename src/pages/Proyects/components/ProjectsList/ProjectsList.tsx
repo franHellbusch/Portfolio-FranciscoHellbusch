@@ -9,7 +9,9 @@ interface IProjectsListProps {
 }
 
 const ProjectsList: React.FC<IProjectsListProps> = ({ projects }) => {
-  const [selectedProject, setSelectedProject] = useState<ProjectModel | null>(null);
+  const [selectedProject, setSelectedProject] = useState<ProjectModel | null | "initial">(
+    "initial"
+  );
 
   const handleSelectProyect = (selected: ProjectModel) => {
     setSelectedProject(selected);
