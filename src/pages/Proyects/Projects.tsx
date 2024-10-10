@@ -16,11 +16,14 @@ const Projects: React.FC = () => {
   const [projectsList, setProjectsList] = useState<ProjectModel[]>([]);
   const [projectsCategoryList, setProjectsCategoryList] = useState<ProjectCategory[]>([]);
   const [selectedCategory, setSelectedCategory] = useState<ProjectCategory | null>(null);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     const fetchProjects = async () => {
+      setIsLoading(true);
       const data = await getProjectsList(selectedCategory?.name || null);
       setProjectsList(data);
+      setIsLoading(false);
     };
 
     fetchProjects();
@@ -28,8 +31,10 @@ const Projects: React.FC = () => {
 
   useEffect(() => {
     const fetchProjectsCategories = async () => {
+      setIsLoading(true);
       const categories = await getProjectsCategoryList();
       setProjectsCategoryList(categories);
+      setIsLoading(false);
     };
 
     fetchProjectsCategories();
@@ -49,13 +54,14 @@ const Projects: React.FC = () => {
           Explore my projects across frontend, backend, and full stack development, showcasing my
           skills and experience in building dynamic applications.
         </p>
-        <ProjectRadioSelectCategory>
+        <ProjectRadioSelectCategory $loading={isLoading}>
           <CategoryRadio>
             <CategoryInput
               type='radio'
               name='radio'
               checked={selectedCategory == null}
               onChange={() => handleCategoryChange()}
+              disabled={isLoading}
             />
             <CategoryName $checked={selectedCategory == null}>All</CategoryName>
           </CategoryRadio>
@@ -66,6 +72,7 @@ const Projects: React.FC = () => {
                 name='radio'
                 checked={selectedCategory?.id == category.id}
                 onChange={() => handleCategoryChange(category)}
+                disabled={isLoading}
               />
               <CategoryName $checked={selectedCategory?.id == category.id}>
                 {category.name}
@@ -74,7 +81,7 @@ const Projects: React.FC = () => {
           ))}
         </ProjectRadioSelectCategory>
       </ProjectsDescription>
-      <ProjectsList projects={projectsList} />
+      <ProjectsList loading={isLoading} projects={projectsList} />
     </PageWithLoading>
   );
 };

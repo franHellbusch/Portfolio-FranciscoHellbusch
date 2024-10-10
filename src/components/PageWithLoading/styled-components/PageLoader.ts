@@ -8,7 +8,7 @@ export const PageLoaderContainer = styled.div<{ $isLoading: boolean }>`
   justify-content: center;
   top: 0;
   right: 0;
-  width: calc(100% - 100px);
+  width: calc(100% - 90px);
   height: 100%;
   background: ${(props) => props.theme.background.light};
   opacity: ${(props) => (props.$isLoading ? 1 : 0)};

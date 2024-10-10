@@ -5,10 +5,11 @@ import { ProjectCard } from "../ProjectCard";
 import { ProjectModal } from "../ProjectModal";
 
 interface IProjectsListProps {
+  loading: boolean;
   projects: ProjectModel[];
 }
 
-const ProjectsList: React.FC<IProjectsListProps> = ({ projects }) => {
+const ProjectsList: React.FC<IProjectsListProps> = ({ loading, projects }) => {
   const [selectedProject, setSelectedProject] = useState<ProjectModel | null | "initial">(
     "initial"
   );
@@ -34,7 +35,7 @@ const ProjectsList: React.FC<IProjectsListProps> = ({ projects }) => {
   }, [selectedProject]);
 
   return (
-    <ProjectsListContainer $shouldCollapse={shouldCollapse}>
+    <ProjectsListContainer $loading={loading} $shouldCollapse={shouldCollapse}>
       <ProjectModal handleClose={handleCloseProyect} project={selectedProject} />
       {projects.map((project) => (
         <ProjectCard handleSelect={handleSelectProyect} key={project.id} project={project} />

@@ -1,6 +1,10 @@
 import styled from "styled-components";
 
-export const ProjectRadioSelectCategory = styled.div`
+interface ProjectRadioSelectCategoryProps {
+  $loading: boolean;
+}
+
+export const ProjectRadioSelectCategory = styled.div<ProjectRadioSelectCategoryProps>`
   position: relative;
   display: flex;
   flex-wrap: nowrap;
@@ -13,6 +17,7 @@ export const ProjectRadioSelectCategory = styled.div`
   gap: 5px; /* Añadir un espacio entre categorías */
   max-width: 100%; /* Asegúrate de que no exceda el ancho del contenedor padre */
   white-space: nowrap; /* Evita que las categorías se envuelvan en múltiples líneas */
+  opacity: ${(props) => (props.$loading ? "0.5" : "1")};
 
   /* Opcional: estilizar el scrollbar */
   &::-webkit-scrollbar {

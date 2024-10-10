@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 interface ProjectsListContainerProps {
   $shouldCollapse: boolean;
+  $loading: boolean;
 }
 
 export const ProjectsListContainer = styled.div<ProjectsListContainerProps>`
@@ -11,6 +12,7 @@ export const ProjectsListContainer = styled.div<ProjectsListContainerProps>`
   gap: 30px;
   flex-wrap: wrap;
   margin: 20px 0 50px 0;
+  opacity: ${(props) => (props.$loading ? "0.5" : "1")};
 
   @media (max-width: 1450px) {
     width: 95%;

@@ -1,5 +1,5 @@
 import React, { PropsWithChildren, useEffect, useState } from "react";
-import { PageLoader, PageLoaderContainer } from "./styled-components";
+import { PageContainerContent, PageLoader, PageLoaderContainer } from "./styled-components";
 import { PageContainer } from "@/styled-components";
 
 interface IPageWithLoadingProps extends PropsWithChildren {
@@ -29,7 +29,7 @@ const PageWithLoading: React.FC<IPageWithLoadingProps> = ({ children, $centered 
       <PageLoaderContainer $isLoading={isLoading}>
         <PageLoader />
       </PageLoaderContainer>
-      {children}
+      <PageContainerContent $centered={$centered}>{children}</PageContainerContent>
     </PageContainer>
   );
 };
