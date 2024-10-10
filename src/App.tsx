@@ -7,6 +7,7 @@ import { NavBarMobile, SideBar } from "./components";
 import { lazy, Suspense, useState } from "react";
 import CursorProvider from "./context/CursorContext";
 import { useMediaQuery } from "react-responsive";
+import { Contact } from "./pages";
 
 const Education = lazy(() => import("./pages/Education/Education"));
 const Home = lazy(() => import("./pages/Home/Home"));
@@ -40,6 +41,7 @@ function App() {
                 <Route path='/work' element={<Work />} />
                 <Route path='/education' element={<Education />} />
                 <Route path='/proyects' element={<Proyects />} />
+                <Route path='/contact' element={<Contact />} />
               </Routes>
             </Suspense>
           </AppContainer>

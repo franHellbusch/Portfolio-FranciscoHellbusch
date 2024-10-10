@@ -13,6 +13,7 @@ export const lightTheme = {
     light: "#767676",
     white: "#FFF",
     lightBlue: "#0762C8",
+    lightRed: "#ed0909",
   },
   background: {
     white: "#FFF",
@@ -31,6 +32,8 @@ export const lightTheme = {
     github: "#2b3137",
     instagram: "#962fbf",
     linkedin: "#0762C8",
+    phone: "#25d366",
+    email: "#f0a000",
   },
 };
 
@@ -49,6 +52,7 @@ export const darkTheme = {
     light: "#8a8a8a",
     white: "#2B2B2B",
     lightBlue: "#2a8cfa",
+    lightRed: "#f74352",
   },
   background: {
     white: "#1E1E1E",
@@ -67,5 +71,7 @@ export const darkTheme = {
     github: "#2b3137",
     instagram: "#962fbf",
     linkedin: "#0762C8",
+    phone: "#25d366",
+    email: "#f0a000",
   },
 };
