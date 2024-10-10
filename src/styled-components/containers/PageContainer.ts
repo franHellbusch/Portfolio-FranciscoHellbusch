@@ -89,13 +89,13 @@ export const PageContainer = styled.div<PageContainerProps>`
     }
   }
 
-  @media (max-width: 500px) {
+  @media (max-width: 550px) {
     &:before {
-      height: 65vh;
+      height: 55vh;
     }
 
     &::after {
-      height: 65vh;
+      height: 55vh;
     }
   }
 `;
