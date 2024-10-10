@@ -11,5 +11,5 @@ export const SideBarContainer = styled.div`
   align-items: center;
   position: sticky;
   top: 0;
-  z-index: 20;
+  z-index: 100;
 `;

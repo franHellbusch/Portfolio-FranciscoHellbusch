@@ -11,7 +11,7 @@ export const MobileNavBar = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 0 20px;
-  z-index: 30;
+  z-index: 100;
   border-radius: 3px;
   box-shadow: 4px 0px 10px 0px rgba(47, 122, 249, 0.1);
 

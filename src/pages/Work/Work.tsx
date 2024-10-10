@@ -1,10 +1,11 @@
-import { PageContainer, SectionDescription } from "@/styled-components";
+import { SectionDescription } from "@/styled-components";
 import React from "react";
 import { ExperienceList } from "./components";
+import { PageWithLoading } from "@/components";
 
 const Work: React.FC = () => {
   return (
-    <PageContainer>
+    <PageWithLoading>
       <SectionDescription>
         <h2>Professional Experience</h2>
         <p>
@@ -15,7 +16,7 @@ const Work: React.FC = () => {
         </p>
       </SectionDescription>
       <ExperienceList />
-    </PageContainer>
+    </PageWithLoading>
   );
 };
 

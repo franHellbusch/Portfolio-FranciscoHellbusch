@@ -1,9 +1,10 @@
-import { PageContainer, SectionDescription } from "@/styled-components";
+import { SectionDescription } from "@/styled-components";
 import { CategoriesList, Presentation } from "./components";
+import { PageWithLoading } from "@/components";
 
 const Home: React.FC = () => {
   return (
-    <PageContainer>
+    <PageWithLoading>
       <Presentation />
       <SectionDescription>
         <h2>Explore My Journey</h2>
@@ -14,7 +15,7 @@ const Home: React.FC = () => {
         </p>
       </SectionDescription>
       <CategoriesList />
-    </PageContainer>
+    </PageWithLoading>
   );
 };
 

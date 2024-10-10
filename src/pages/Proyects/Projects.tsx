@@ -1,6 +1,5 @@
 import { ProjectCategory, ProjectModel } from "@/models";
 import { getProjectsCategoryList, getProjectsList } from "@/services";
-import { PageContainer } from "@/styled-components";
 import React, { useEffect, useState } from "react";
 import {
   CategoryInput,
@@ -11,6 +10,7 @@ import {
 } from "./styled-components";
 import { Code } from "react-feather";
 import { ProjectsList } from "./components";
+import { PageWithLoading } from "@/components";
 
 const Projects: React.FC = () => {
   const [projectsList, setProjectsList] = useState<ProjectModel[]>([]);
@@ -40,7 +40,7 @@ const Projects: React.FC = () => {
   };
 
   return (
-    <PageContainer $position='relative'>
+    <PageWithLoading>
       <ProjectsDescription>
         <h2>
           <Code /> My Projects
@@ -75,7 +75,7 @@ const Projects: React.FC = () => {
         </ProjectRadioSelectCategory>
       </ProjectsDescription>
       <ProjectsList projects={projectsList} />
-    </PageContainer>
+    </PageWithLoading>
   );
 };
 

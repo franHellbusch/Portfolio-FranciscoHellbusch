@@ -6,14 +6,13 @@ interface PageContainerProps {
 }
 
 export const PageContainer = styled.div<PageContainerProps>`
-  position: ${(props) => props.$position || "initial"};
+  position: relative;
   flex: 1;
-  background: ${(props) => props.theme.background.light};
   padding: 0 25px;
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  ${(props) => props.$centered && `align-items: center; justify-content: center;`}
+  ${(props) => props.$centered && "align-items: center; justify-content: center;"}
 
   @media (max-width: 767px) {
     padding-bottom: 100px;

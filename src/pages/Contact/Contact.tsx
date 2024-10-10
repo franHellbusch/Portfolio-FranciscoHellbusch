@@ -1,10 +1,11 @@
-import { PageContainer, SectionDescription } from "@/styled-components";
+import { SectionDescription } from "@/styled-components";
 import { ContactForm, ContactSocialMediaList } from "./components";
 import { ContactContentContainer, ContactSeparator } from "./styled-components";
+import { PageWithLoading } from "@/components";
 
 const Contact: React.FC = () => {
   return (
-    <PageContainer $centered>
+    <PageWithLoading $centered>
       <SectionDescription>
         <h2>Contact Me</h2>
         <p>
@@ -18,7 +19,7 @@ const Contact: React.FC = () => {
         <ContactSeparator />
         <ContactForm />
       </ContactContentContainer>
-    </PageContainer>
+    </PageWithLoading>
   );
 };
 
